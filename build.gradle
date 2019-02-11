@@ -1,5 +1,5 @@
 subprojects {
-  apply plugin: 'python'
+  apply plugin: 'java'
 
   repositories {
     jcenter()
