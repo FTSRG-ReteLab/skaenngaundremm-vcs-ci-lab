@@ -9,3 +9,4 @@ branches:
 
 script:
 - ./gradlew build
+- ./gradlew test
