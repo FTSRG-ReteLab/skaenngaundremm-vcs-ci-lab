@@ -14,15 +14,20 @@ public class TrainSystemTest {
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
+
 	
 	@Before
 	public void before() {
+
 		TrainSystem system = new TrainSystem();
 		controller = system.getController();
 		sensor = system.getSensor();
+
 		user = system.getUser();
 
 		sensor.overrideSpeedLimit(50);
+
+
 	}
 	
 	@Test
@@ -39,6 +44,7 @@ public class TrainSystemTest {
 		Assert.assertEquals(10, controller.getReferenceSpeed());
 		controller.followSpeed();
 		Assert.assertEquals(10, controller.getReferenceSpeed());
+
 	}
 
 	@Test
@@ -53,7 +59,15 @@ public class TrainSystemTest {
 	@Test
 	public void A() {
 		sensor.overrideSpeedLimit(10);
-		Assert.assertEquals(1, controller.getReferenceSpeed());
+
 	}
-	
+
+	@Test
+	public void checkGuava() {
+		Assert.assertNotEquals(0, Tacho.getGuavaTable().size());
+	}
+
+
+
+
 }
