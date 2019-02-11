@@ -1,6 +1,6 @@
-language: python
+language: java
 
-jdk:
+jdk:
   - oraclejdk8
 
 branches:
@@ -9,3 +9,4 @@ branches:
 
 script:
 - ./gradlew build
+- ./gradlew test
