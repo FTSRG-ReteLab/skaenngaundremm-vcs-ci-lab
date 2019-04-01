@@ -1,12 +1,8 @@
 package hu.bme.mit.train.controller;
 
-import com.google.common.collect.HashBasedTable;
-import com.google.common.collect.Table;
-
-import java.util.Date;
 
 public class Tacho {
-
+/*
      static Table<Long, Integer, Integer> guavaTable = null;
 
     public Tacho() {
@@ -28,4 +24,5 @@ public class Tacho {
             guavaTable = HashBasedTable.create();
         return guavaTable;
     }
+    */
 }
