@@ -8,7 +8,22 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	private Thread t;
 
+	TrainControllerImpl() {
+		t = new Thread() {
+			@Override
+			public void run() {
+				t.run();
+				try {
+					followSpeed();
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+	}
 
 
 	@Override
@@ -24,7 +39,7 @@ public class TrainControllerImpl implements TrainController {
 		}
 
 		enforceSpeedLimit();
-		Tacho.put(System.currentTimeMillis(),this.step,this.referenceSpeed);
+		//Tacho.put(System.currentTimeMillis(),this.step,this.referenceSpeed);
 
 
 
