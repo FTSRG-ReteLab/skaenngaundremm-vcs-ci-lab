@@ -13,6 +13,11 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void followSpeed() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
@@ -25,8 +30,6 @@ public class TrainControllerImpl implements TrainController {
 
 		enforceSpeedLimit();
 		Tacho.put(System.currentTimeMillis(),this.step,this.referenceSpeed);
-
-
 
 	}
 
