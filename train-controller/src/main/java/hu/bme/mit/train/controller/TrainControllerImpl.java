@@ -10,7 +10,7 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 	private Thread t;
 
-	TrainControllerImpl() {
+	public TrainControllerImpl() {
 		t = new Thread() {
 			@Override
 			public void run() {

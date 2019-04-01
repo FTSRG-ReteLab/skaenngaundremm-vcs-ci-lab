@@ -62,10 +62,10 @@ public class TrainSystemTest {
 
 	}
 
-	@Test
+	/*@Test
 	public void checkGuava() {
 		Assert.assertNotEquals(0, Tacho.getGuavaTable().size());
-	}
+	}*/
 
 
 
